@@ -1,6 +1,5 @@
 import React from "react";
 
-import cv from "../../assets/cv/gabriel.pdf";
 import html from "../../assets/iconos/skills/html.png";
 import js from "../../assets/iconos/skills/js.png";
 import css from "../../assets/iconos/skills/css.png";
@@ -28,16 +27,14 @@ export const About = () => {
           technologies and tools to offer efficient and innovative solutions.
         </p>
         <div className="flex justify-center">
-          <a href={cv} download="CV_Robert_Gabriel.pdf">
             <Button
               label="Download CV"
               icon="pi pi-download"
               severity="secondary"
+              onClick={() =>  window.open('https://docs.google.com/document/d/1tJZSAlGLrwu7UrO7yYM9ZOomumI0fZiX/edit?usp=sharing&ouid=101641531762784387805&rtpof=true&sd=true', '_blank')}
             />
-          </a>
         </div>
       </div>
-
       <div className="flex flex-col justify-center space-y-4">
         <h1 className="text-3xl font-bold">Skills</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
