@@ -17,22 +17,31 @@ export const About = () => {
         <h3 className="text-xl md:text-2xl">
           I'm Robert Gabriel
           <span className="block text-[#4A9DFF]">
-            Front End Developer / Systems Engineer
+            Full Stack Developer / Systems Engineer
           </span>
         </h3>
         <p className="leading-relaxed">
-          I'm a passionate frontend developer, specialized in creating modern,
-          functional and responsive websites. I'm motivated to face challenges
-          that drive the development of my skills and allow me to adopt new
-          technologies and tools to offer efficient and innovative solutions.
+          I’m a passionate Full Stack Developer dedicated to building
+          high-performance, scalable, and user-centric web applications. With a
+          strong foundation in both frontend and backend development, I
+          specialize in crafting modern, responsive, and efficient digital
+          solutions. I thrive on solving complex problems, continuously
+          expanding my skill set, and leveraging the latest technologies to
+          deliver seamless experiences. My goal is to create innovative and
+          robust systems that drive value and enhance user interactions.
         </p>
         <div className="flex justify-center">
-            <Button
-              label="Download CV"
-              icon="pi pi-download"
-              severity="secondary"
-              onClick={() =>  window.open('https://docs.google.com/document/d/1tJZSAlGLrwu7UrO7yYM9ZOomumI0fZiX/edit?usp=sharing&ouid=101641531762784387805&rtpof=true&sd=true', '_blank')}
-            />
+          <Button
+            label="Download CV"
+            icon="pi pi-download"
+            severity="secondary"
+            onClick={() =>
+              window.open(
+                "https://docs.google.com/document/d/1tJZSAlGLrwu7UrO7yYM9ZOomumI0fZiX/edit?usp=sharing&ouid=101641531762784387805&rtpof=true&sd=true",
+                "_blank"
+              )
+            }
+          />
         </div>
       </div>
       <div className="flex flex-col justify-center space-y-4">

@@ -1,80 +1,90 @@
 import React from "react";
-import { Card } from "primereact/card";
 import { Button } from "primereact/button";
+import { DataView } from "primereact/dataview";
 import { Tag } from "primereact/tag";
 
 export const CardComponete = ({ data }) => {
-  const severities = ["info", "success", "warning", "danger", "secondary", "primary", "contrast"];
+  const severities = [
+    "info",
+    "success",
+    "warning",
+    "danger",
+    "secondary",
+    "primary",
+    "contrast",
+  ];
+
   const getSeverity = (index) => {
     return severities[index % severities.length];
   };
 
-  return (
-    <div className="container mx-auto px-4">
-      <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-center">
-        {data.map((proyect, i) => {
-          const header = (
-            <img 
-              alt={proyect.name} 
-              src={proyect.img} 
-              className="h-[200px] w-full" 
-            />
-          );
-          
-          const footer = (
-            <div className="flex flex-col xl:flex-row w-full justify-center items-center gap-2">
-              <Button
-                label="Website"
-                icon="pi pi-external-link"
-                onClick={() => window.open(proyect.web, "_blank")}
-                className="w-full"
-              />
-              <Button
-                label="Repository"
-                severity="secondary"
-                icon="pi pi-github"
-                onClick={() => window.open(proyect.repositori, "_blank")}
-                className="w-full"
-              />
-            </div>
-          );
+  const itemTemplate = (project, index) => {
+    return (
+      <div className="col-12 bg-transparent" key={index}>
+        {index !== 0 && <hr className="border-t-2 border-white my-6 w-full" />}
+        <div
+          className="flex flex-col xl:flex-row xl:items-center p-4 gap-4 bg-transparent"
+        >
+          <img
+            alt={project.name}
+            src={project.img}
+            className="w-52 h-52 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round rounded-lg"
+          />
 
-          return (
-            <div key={i} className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-1.5rem)]">
-              <Card
-                className="h-full"
-                title={proyect.name}
-                subTitle={
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {proyect.technology.map((tech, index) => (
-                        <Tag 
-                          severity={getSeverity(index)} 
-                          value={tech} 
-                          key={index} 
-                          rounded
-                        />
-                    ))}
-                  </div>
-                }
-                footer={footer}
-                header={header}
-                pt={{
-                  title: {
-                    className:
-                      "flex h-24 text-center items-center justify-center text-xl sm:text-2xl font-bold",
-                  },
-                  subTitle: {
-                    className:
-                      "flex h-16 text-center items-center justify-center text-sm sm:text-base",
-                  },
-                  content: { className: "p-0" },
-                  body: { className: "p-4" },
-                }}
-              ></Card>
+          <div className="flex flex-col sm:flex-row justify-between items-center xl:items-center flex-1 gap-4">
+            <div className="flex flex-col items-center justify-center sm:items-start gap-3 my-4">
+              <div className="text-2xl font-bold text-900 mb-2">{project.name}</div>
+              <div className="flex items-center">
+                <div className="flex flex-wrap gap-2 justify-center mb-2 h-auto">
+                  {project.technology.map((tech, idx) => (
+                    <Tag
+                      severity={getSeverity(idx)}
+                      value={tech}
+                      key={idx}
+                      rounded
+                      className="text-sm h-5"
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
-          );
-        })}
+            <div className="flex sm:flex-col justify-center items-center sm:items-end gap-3 sm:gap-2">
+              <Button
+                icon="pi pi-link"
+                rounded
+                outlined
+                aria-label="Filter"
+                onClick={() => window.open(project.web, "_blank")}
+              />
+              <Button
+                icon="pi pi-github"
+                severity="secondary"
+                rounded
+                outlined
+                aria-label="Filter"
+                onClick={() => window.open(project.repositori, "_blank")}
+              />
+            </div>
+          </div>
+        </div>
       </div>
+    );
+  };
+
+  return (
+    <div className="w-full bg-transparent p-0 m-0">
+      <DataView 
+        value={data} 
+        itemTemplate={itemTemplate} 
+        layout="grid" 
+        pt={{
+          grid: { className: 'bg-transparent border-none w-full p-0 m-0' },
+          content: { className: 'bg-transparent border-none w-full p-0 m-0' },
+          container: { className: 'bg-transparent border-none w-full p-0 m-0' },
+          item: { className: 'bg-transparent border-none w-full p-0 m-0' }
+        }}
+        className="bg-transparent border-none w-full p-0 m-0"
+      />
     </div>
   );
 };
