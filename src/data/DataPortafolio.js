@@ -7,6 +7,7 @@ import t6 from "../assets/img/t6.webp";
 import t7 from "../assets/img/t7.webp";
 import t8 from "../assets/img/t8.webp";
 import t9 from "../assets/img/t9.webp";
+import t10 from "../assets/img/t10.webp";
 
 export const DataPortafolioApi = [
   {
@@ -33,7 +34,7 @@ export const DataPortafolioApi = [
   {
     name: "Dragon Ball Explorer",
     technology: [
-      "Vue",
+      "Vue 3",
       "HTML",
       "Tailwind CSS",
       "TypeScript",
@@ -66,14 +67,21 @@ export const DataPortafolioPages = [
 export const DataPortafolioOther = [
   {
     name: "Interactive User CRUD",
-    technology: ["Vue", "HTML", "Tailwind CSS", "PrimeVue", "JavaScript", "NodeJS"],
+    technology: ["Vue 3", "HTML", "Tailwind CSS", "PrimeVue", "JavaScript", "NodeJS"],
     img: t8,
     web: "https://usercrud01.netlify.app/",
     repositori: "https://github.com/r-gabriel-f/frontendcruduser",
   },
   {
+    name: "Factus Helltec Electronic Billing",
+    technology: ["Vue 3", "HTML", "Tailwind CSS", "PrimeVue", "TypeScript", "TanStack"],
+    img: t10,
+    web: "https://factusapirobert.netlify.app/",
+    repositori: "https://github.com/r-gabriel-f/factusapi",
+  },
+  {
     name: "Interactive Gemini AI",
-    technology: ["Vue", "HTML", "Tailwind CSS", "PrimeVue", "TypeScript"],
+    technology: ["Vue 3", "HTML", "Tailwind CSS", "PrimeVue", "TypeScript"],
     img: t9,
     web: "https://geminiaigoogle.netlify.app/",
     repositori: "https://github.com/r-gabriel-f/gemini",
