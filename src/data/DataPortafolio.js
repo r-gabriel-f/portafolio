@@ -90,7 +90,7 @@ export const DataPortafolioOther = [
     name: "Interactive Shopping Cart",
     technology: ["React", "HTML", "CSS", "JavaScript"],
     img: t5,
-    web: "https://r-gabriel-f.github.io/carrito_de_compras/",
+    web: "https://shoppingcardstripe.netlify.app/",
     repositori: "https://github.com/r-gabriel-f/carrito_de_compras",
   },
   
