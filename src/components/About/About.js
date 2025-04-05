@@ -15,6 +15,7 @@ import nestjs from "../../assets/iconos/skills/NestJS.svg";
 import nodejs from "../../assets/iconos/skills/nodejs.png";
 import laravel from "../../assets/iconos/skills/Laravel.png";
 import docker from "../../assets/iconos/skills/docker.webp";
+import postman from "../../assets/iconos/skills/postman-icon.svg";
 import { Button } from "primereact/button";
 export const About = () => {
   // Use the Google Translate detector hook
@@ -163,14 +164,6 @@ export const About = () => {
                 className="w-8 sm:w-12 md:w-16 hover:rotate-[360deg] transition-transform duration-1000"
               />
             </div>
-            <div className="flex flex-col items-center">
-              <h3 className="text-base font-semibold">Git</h3>
-              <img
-                src={git}
-                alt="Git Icon"
-                className="w-8 sm:w-12 md:w-16 hover:rotate-[360deg] transition-transform duration-1000"
-              />
-            </div>
           </div>
         </div>
 
@@ -190,6 +183,14 @@ export const About = () => {
               <img
                 src={docker}
                 alt="Docker Icon"
+                className="w-8 sm:w-12 md:w-16 hover:rotate-[360deg] transition-transform duration-1000"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <h3 className="text-base font-semibold">Postman</h3>
+              <img
+                src={postman}
+                alt="Postman Icon"
                 className="w-8 sm:w-12 md:w-16 hover:rotate-[360deg] transition-transform duration-1000"
               />
             </div>
