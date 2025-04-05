@@ -22,7 +22,7 @@ export const About = () => {
   return (
     <section className="h-auto sm:h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 p-4 pt-10">
       <div className="flex flex-col justify-center space-y-4">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">About</h2>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">About Me</h2>
         <h3 className="text-xl md:text-2xl">
           I'm Robert Gabriel
           <span className="block text-[#4A9DFF]">

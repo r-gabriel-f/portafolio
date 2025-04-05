@@ -122,3 +122,63 @@ export const DataPortafolioOther = [
     repositori: "https://github.com/r-gabriel-f/gemini",
   },
 ];
+export const works = [
+  {
+    company: "Shipedge",
+    position: "Full Stack Developer",
+    startDate: "February 2024",
+    endDate: "Actuality",
+    responsibilities: [
+      "Development of functionalities in the Omnio E-Commerce Platform Project, mainly in the frontend.",
+      "Occasional collaboration in backend tasks (Condor), such as API consumption and testing.",
+      "Configuration of the development environment with Docker, including the orchestration of services such as the PostgreSQL database.",
+      "Use of Postman for endpoint testing and feature validation.",
+      "Support in Manual QA tasks on the Shipedge platform to ensure the correct functioning of the system.",
+      "Working under Scrum methodology, managing tasks in ClickUp and using GitLab for version control."
+    ],
+    technologies: [
+      "Vue 3", "TypeScript", "Tailwind CSS", "PrimeVue", "TanStack", "PostgreSQL",
+      "Laravel", "Docker", "Postman", "Git", "GitLab", "Scrum", "ClickUp"
+    ]
+  },
+  {
+    company: "Tecnoacero S.R.L",
+    position: "System Engineer",
+    startDate: "July 2023",
+    endDate: "February 2024",
+    responsibilities: [
+      "Product website development.",
+      "Procurement web systems development."
+    ],
+    technologies: [
+      "React.js", "Tailwind CSS", "PWA", "Git", "PostgreSQL", "Node.js", "Nginx"
+    ]
+  },
+  {
+    company: "Huanuni Mining Company",
+    position: "Systems Assistant",
+    startDate: "July 2022",
+    endDate: "February 2023",
+    responsibilities: [
+      "Website and web application development.",
+      "Development of responsive web interfaces (UX/UI).",
+      "Creation of back end using Mysql, Node.js.",
+      "PWA implementation of websites and web applications.",
+      "Maintenance of websites and web applications.",
+      "Structured wiring of surveillance cameras."
+    ],
+    technologies: [
+      "HTML5", "CSS", "JavaScript", "React.js", "Material-UI", "PWA", "Git", "MySQL", "Node.js", "Nginx"
+    ]
+  },
+  {
+    company: "Information and Communication Technologies Unit of the Military School of Engineering U.A. Cochabamba",
+    position: "Intern",
+    startDate: "December 2021",
+    endDate: "January 2022",
+    responsibilities: [
+      "Installation of surveillance cameras in the EMI Lanza courses."
+    ],
+    technologies: []
+  }
+];

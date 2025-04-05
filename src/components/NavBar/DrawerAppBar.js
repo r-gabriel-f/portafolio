@@ -9,7 +9,7 @@ function DrawerAppBar() {
       command: () => scrollToSection("home"),
     },
     {
-      label: "About",
+      label: "About Me",
       icon: "pi pi-user",
       command: () => scrollToSection("about"),
     },
