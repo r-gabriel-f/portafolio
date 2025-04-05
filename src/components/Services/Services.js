@@ -5,75 +5,8 @@ import speed from "../../assets/iconos/services/speed.png";
 import social from "../../assets/iconos/services/social-media.png";
 import checked from "../../assets/iconos/services/checked.png";
 import seo from "../../assets/iconos/services/seo.png";
-import { Timeline } from 'primereact/timeline';
-import { Card } from 'primereact/card';
-import { works } from "../../data/DataPortafolio";
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
+
 export const Services = () => {
-  const workEvents = works.map((work, index) => {
-    const colors = ['#9C27B0', '#673AB7', '#FF9800', '#607D8B', '#2196F3', '#4CAF50'];
-    const icons = ['pi pi-briefcase', 'pi pi-building', 'pi pi-building', 'pi pi-building'];
-    const tagColors = ['#e91e63', '#3f51b5', '#009688', '#ff5722', '#4caf50', '#2196f3'];
-    const technologiesWithColors = work.technologies ? work.technologies.map((tech, i) => ({
-      name: tech,
-      color: tagColors[i % tagColors.length]
-    })) : [];
-    
-    return {
-      ...work,
-      color: colors[index % colors.length],
-      icon: icons[index % icons.length],
-      technologiesWithColors
-    };
-  });
-
-  const customizedMarker = (item) => {
-    return (
-      <span className="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-md" style={{ backgroundColor: item.color }}>
-        <i className={item.icon}></i>
-      </span>
-    );
-  };
-
-  const customizedContent = (item) => {
-    return (
-      <Card 
-        title={item.company} 
-        subTitle={`${item.position} | ${item.startDate} - ${item.endDate}`}
-        className="mb-4 shadow-md"
-      >
-        {item.responsibilities && item.responsibilities.length > 0 && (
-          <div className="mt-2">
-            <h4 className="font-semibold">Responsibilities:</h4>
-            <ul className="list-disc pl-5 text-sm">
-              {item.responsibilities.map((resp, index) => (
-                <li key={index}>{resp}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-        
-        {item.technologiesWithColors && item.technologiesWithColors.length > 0 && (
-          <div className="mt-3">
-            <h4 className="font-semibold">Technologies:</h4>
-            <div className="flex flex-wrap gap-1 mt-1">
-              {item.technologiesWithColors.map((tech, index) => (
-                <span 
-                  key={index} 
-                  className="px-2 py-1 text-xs text-white rounded-full"
-                  style={{ backgroundColor: tech.color }}
-                >
-                  {tech.name}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-      </Card>
-    );
-  };
-
   return (
     <section className="h-auto flex flex-col justify-center pt-10 p-4">
         <div className="mb-8">
@@ -86,7 +19,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">
             <h3 className="text-xl font-semibold">Responsive</h3>
             <img
@@ -167,25 +100,6 @@ export const Services = () => {
               a quality user experience to increase the ranking in relevant
               search results.
             </p>
-          </div>
-        </div>
-
-        <div className="mt-8">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-            Work Experience
-          </h2>
-          <div className="card">
-            <Timeline 
-              value={workEvents} 
-              align="alternate" 
-              className="w-full md:w-10/12 mx-auto customized-timeline" 
-              marker={customizedMarker} 
-              content={customizedContent}
-              pt={{
-                event: { className: 'p-0' },
-                connector: { className: 'bg-gray-300 w-0.5' }
-              }}
-            />
           </div>
         </div>
     </section>

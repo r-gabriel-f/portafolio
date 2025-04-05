@@ -14,14 +14,19 @@ function DrawerAppBar() {
       command: () => scrollToSection("about"),
     },
     {
-      label: "Services",
-      icon: "pi pi-cog",
-      command: () => scrollToSection("services"),
+      label: "Experience",
+      icon: "pi pi-briefcase",
+      command: () => scrollToSection("experience"),
     },
     {
       label: "Projects",
-      icon: "pi pi-briefcase",
+      icon: "pi pi-folder-open",
       command: () => scrollToSection("projects"),
+    },
+    {
+      label: "Services",
+      icon: "pi pi-cog",
+      command: () => scrollToSection("services"),
     },
     {
       label: "Contact",
