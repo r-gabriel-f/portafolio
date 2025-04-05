@@ -19,6 +19,12 @@ export const Portafolio = () => {
       <div>
         <div className="flex flex-col items-center justify-center">
           <h3 className="text-32xl md:text-3xl font-bold tracking-tight text-[#4A9DFF]">
+            Interactive Projects
+          </h3>
+          <CardComponete data={DataPortafolioOther} />
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <h3 className="text-32xl md:text-3xl font-bold tracking-tight text-[#4A9DFF]">
             API Consumption
           </h3>
           <CardComponete data={DataPortafolioApi} />
@@ -28,12 +34,6 @@ export const Portafolio = () => {
             Landing Pages
           </h3>
           <CardComponete data={DataPortafolioPages} />
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h3 className="text-32xl md:text-3xl font-bold tracking-tight text-[#4A9DFF]">
-            Interactive Projects
-          </h3>
-          <CardComponete data={DataPortafolioOther} />
         </div>
       </div>
     </section>

@@ -8,6 +8,11 @@ import tailwind from "../../assets/iconos/skills/tailwind.webp";
 import vue from "../../assets/iconos/skills/vue.webp";
 import ts from "../../assets/iconos/skills/typscript.webp";
 import react from "../../assets/iconos/skills/react.png";
+import materialui from "../../assets/iconos/skills/material-ui-1.svg";
+import prime from "../../assets/iconos/skills/primeng-logo-black.png"; 
+import nestjs from "../../assets/iconos/skills/NestJS.svg";
+import nodejs from "../../assets/iconos/skills/nodejs.png";
+import laravel from "../../assets/iconos/skills/Laravel.png";
 import { Button } from "primereact/button";
 export const About = () => {
   return (
@@ -72,6 +77,22 @@ export const About = () => {
             />
           </div>
           <div className="flex flex-col items-center">
+            <h3 className="text-base font-semibold">Prime UI</h3>
+            <img
+              src={prime}
+              alt="prime Icon"
+              className="w-16 sm:w-20 md:w-24 hover:rotate-[360deg] transition-transform duration-1000"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <h3 className="text-base font-semibold">Material UI</h3>
+            <img
+              src={materialui}
+              alt="Material UI Icon"
+              className="w-16 sm:w-20 md:w-24 hover:rotate-[360deg] transition-transform duration-1000"
+            />
+          </div>
+          <div className="flex flex-col items-center">
             <h3 className="text-base font-semibold">JS</h3>
             <img
               src={js}
@@ -99,6 +120,30 @@ export const About = () => {
             <h3 className="text-base font-semibold">Vue</h3>
             <img
               src={vue}
+              alt="Vue Icon"
+              className="w-16 sm:w-20 md:w-24 hover:rotate-[360deg] transition-transform duration-1000"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <h3 className="text-base font-semibold">Node JS Express</h3>
+            <img
+              src={nodejs}
+              alt="Vue Icon"
+              className="w-16 sm:w-20 md:w-24 hover:rotate-[360deg] transition-transform duration-1000"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <h3 className="text-base font-semibold">Nest JS</h3>
+            <img
+              src={nestjs}
+              alt="Vue Icon"
+              className="w-16 sm:w-20 md:w-24 hover:rotate-[360deg] transition-transform duration-1000"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <h3 className="text-base font-semibold">Laravel</h3>
+            <img
+              src={laravel}
               alt="Vue Icon"
               className="w-16 sm:w-20 md:w-24 hover:rotate-[360deg] transition-transform duration-1000"
             />

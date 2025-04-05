@@ -11,6 +11,20 @@ import t10 from "../assets/img/t10.webp";
 
 export const DataPortafolioApi = [
   {
+    name: "Dragon Ball Explorer",
+    technology: [
+      "Vue 3",
+      "HTML",
+      "Tailwind CSS",
+      "TypeScript",
+      "TanStack",
+      "PrimeVue",
+    ],
+    img: t7,
+    web: "https://apidragonball.netlify.app/",
+    repositori: "https://github.com/r-gabriel-f/Dragonball",
+  },
+  {
     name: "Country Explorer",
     technology: ["React", "HTML", "CSS", "JavaScript"],
     img: t2,
@@ -30,20 +44,6 @@ export const DataPortafolioApi = [
     img: t4,
     web: "https://r-gabriel-f.github.io/pokemon/",
     repositori: "https://github.com/r-gabriel-f/pokemon",
-  },
-  {
-    name: "Dragon Ball Explorer",
-    technology: [
-      "Vue 3",
-      "HTML",
-      "Tailwind CSS",
-      "TypeScript",
-      "TanStack",
-      "PrimeVue",
-    ],
-    img: t7,
-    web: "https://apidragonball.netlify.app/",
-    repositori: "https://github.com/r-gabriel-f/Dragonball",
   },
 ];
 
@@ -67,18 +67,53 @@ export const DataPortafolioPages = [
 export const DataPortafolioOther = [
   {
     name: "Interactive User CRUD",
-    technology: ["Vue 3", "HTML", "Tailwind CSS", "PrimeVue", "JavaScript", "NodeJS"],
+    technology: [
+      "Vue 3",
+      "HTML",
+      "Tailwind CSS",
+      "PrimeVue",
+      "JavaScript",
+      "NodeJS",
+    ],
     img: t8,
     web: "https://usercrud01.netlify.app/",
-    repositori: "https://github.com/r-gabriel-f/frontendcruduser",
+    repositori: {
+      frontend: "https://github.com/r-gabriel-f/frontendcruduser",
+      backend: "https://github.com/r-gabriel-f/backendcruduser",
+    },
+  },
+  {
+    name: "Interactive Shopping Cart with Stripe",
+    technology: [
+      "React",
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "Stripe API",
+      "NestJS",
+    ],
+    img: t5,
+    web: "https://shoppingcardstripe.netlify.app/",
+    repositori: {
+      frontend: "https://github.com/r-gabriel-f/carrito_de_compras",
+      backend: "https://github.com/r-gabriel-f/stripebackend",
+    },
   },
   {
     name: "Factus Helltec Electronic Billing",
-    technology: ["Vue 3", "HTML", "Tailwind CSS", "PrimeVue", "TypeScript", "TanStack"],
+    technology: [
+      "Vue 3",
+      "HTML",
+      "Tailwind CSS",
+      "PrimeVue",
+      "TypeScript",
+      "TanStack",
+    ],
     img: t10,
     web: "https://factusapirobert.netlify.app/",
     repositori: "https://github.com/r-gabriel-f/factusapi",
   },
+
   {
     name: "Interactive Gemini AI",
     technology: ["Vue 3", "HTML", "Tailwind CSS", "PrimeVue", "TypeScript"],
@@ -86,12 +121,4 @@ export const DataPortafolioOther = [
     web: "https://geminiaigoogle.netlify.app/",
     repositori: "https://github.com/r-gabriel-f/gemini",
   },
-  {
-    name: "Interactive Shopping Cart",
-    technology: ["React", "HTML", "CSS", "JavaScript"],
-    img: t5,
-    web: "https://shoppingcardstripe.netlify.app/",
-    repositori: "https://github.com/r-gabriel-f/carrito_de_compras",
-  },
-  
 ];

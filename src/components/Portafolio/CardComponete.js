@@ -51,19 +51,57 @@ export const CardComponete = ({ data }) => {
             <div className="flex sm:flex-col justify-center items-center sm:items-end gap-3 sm:gap-2">
               <Button
                 icon="pi pi-link"
+                label="Visit Website"
+                severity="primary"
+                className="p-button-outlined p-button-rounded"
+                style={{ minWidth: '120px' }}
                 rounded
                 outlined
                 aria-label="Filter"
                 onClick={() => window.open(project.web, "_blank")}
               />
-              <Button
-                icon="pi pi-github"
-                severity="secondary"
-                rounded
-                outlined
-                aria-label="Filter"
-                onClick={() => window.open(project.repositori, "_blank")}
-              />
+              {typeof project.repositori === 'string' ? (
+                <Button
+                  icon="pi pi-github"
+                  severity="secondary"
+                  label="Repository"
+                  className="p-button-outlined p-button-rounded"
+                  style={{ minWidth: '120px' }}
+                  rounded
+                  outlined
+                  aria-label="Repository"
+                  onClick={() => window.open(project.repositori, "_blank")}
+                />
+              ) : (
+                <div className="flex gap-2">
+                  <Button
+                    icon="pi pi-github"
+                    severity="secondary"
+                    label="Frontend Repository"
+                    className="p-button-outlined p-button-rounded"
+                    style={{ minWidth: '120px' }}
+                    rounded
+                    outlined
+                    aria-label="Frontend Repository"
+                    tooltip="Frontend"
+                    tooltipOptions={{ position: 'top' }}
+                    onClick={() => window.open(project.repositori.frontend, "_blank")}
+                  />
+                  <Button
+                    icon="pi pi-github"
+                    severity="info"
+                    label="Backend Repository"
+                    className="p-button-outlined p-button-rounded"
+                    style={{ minWidth: '120px' }}
+                    rounded
+                    outlined
+                    aria-label="Backend Repository"
+                    tooltip="Backend"
+                    tooltipOptions={{ position: 'top' }}
+                    onClick={() => window.open(project.repositori.backend, "_blank")}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
