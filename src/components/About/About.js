@@ -1,4 +1,5 @@
 import React from "react";
+import { useGoogleTranslateDetector } from "../GoogleTranslateDetector";
 
 import html from "../../assets/iconos/skills/html.png";
 import js from "../../assets/iconos/skills/js.png";
@@ -9,13 +10,15 @@ import vue from "../../assets/iconos/skills/vue.webp";
 import ts from "../../assets/iconos/skills/typscript.webp";
 import react from "../../assets/iconos/skills/react.png";
 import materialui from "../../assets/iconos/skills/material-ui-1.svg";
-import prime from "../../assets/iconos/skills/primeng-logo-black.png"; 
+import prime from "../../assets/iconos/skills/primeng-logo-black.png";
 import nestjs from "../../assets/iconos/skills/NestJS.svg";
 import nodejs from "../../assets/iconos/skills/nodejs.png";
 import laravel from "../../assets/iconos/skills/Laravel.png";
 import docker from "../../assets/iconos/skills/docker.webp";
 import { Button } from "primereact/button";
 export const About = () => {
+  // Use the Google Translate detector hook
+  const { language } = useGoogleTranslateDetector();
   return (
     <section className="h-auto sm:h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 p-4 pt-10">
       <div className="flex flex-col justify-center space-y-4">
@@ -41,18 +44,20 @@ export const About = () => {
             label="Download CV"
             icon="pi pi-download"
             severity="secondary"
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/document/d/1tJZSAlGLrwu7UrO7yYM9ZOomumI0fZiX/edit?usp=sharing&ouid=101641531762784387805&rtpof=true&sd=true",
-                "_blank"
-              )
-            }
+            onClick={() => {
+              const url =
+                language === "es"
+                  ? "https://docs.google.com/document/d/1tJZSAlGLrwu7UrO7yYM9ZOomumI0fZiX/edit?usp=sharing&ouid=101641531762784387805&rtpof=true&sd=true"
+                  : "https://docs.google.com/document/d/105m-c6nn0kN0tuXbzNuSAG6gdW7NwGXr/edit?usp=sharing&ouid=101641531762784387805&rtpof=true&sd=true  ";
+
+              window.open(url, "_blank");
+            }}
           />
         </div>
       </div>
       <div className="flex flex-col justify-center space-y-4">
         <h1 className="text-3xl font-bold">Skills</h1>
-        
+
         <div className="space-y-2">
           <h2 className="text-2xl font-semibold text-[#4A9DFF]">Frontend</h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -130,7 +135,7 @@ export const About = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="space-y-2 mt-6">
           <h2 className="text-2xl font-semibold text-[#4A9DFF]">Backend</h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4">
