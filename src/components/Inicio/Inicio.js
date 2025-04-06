@@ -19,7 +19,7 @@ export const Inicio = () => {
           I'm <span className="text-gray-100">Robert Gabriel</span>
         </h2>
         <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#4A9DFF]">
-          FullStack Developer
+          Full Stack Developer
         </h3>
       </div>
     </div>
